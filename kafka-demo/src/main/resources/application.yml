@@ -13,3 +13,13 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       # Value deserializer. StringDeserializer is used to deserialize the value of the message
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+    # Kafka producer properties
+    # https://kafka.apache.org/documentation/#producerconfigs
+    producer:
+      # Comma-delimited list of host:port pairs to use for establishing the initial connections to the Kafka cluster
+      bootstrap-servers: localhost:9092
+      # Key serializer. StringSerializer is used to serialize the key of the message
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # Value serializer. StringSerializer is used to serialize the value of the message
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
