@@ -12,7 +12,9 @@ spring:
       # Key deserializer. StringDeserializer is used to deserialize the key of the message
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       # Value deserializer. StringDeserializer is used to deserialize the value of the message
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      # value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      # Use JsonDeserializer to deserialize the value of the message
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
 
     # Kafka producer properties
     # https://kafka.apache.org/documentation/#producerconfigs
@@ -22,4 +24,6 @@ spring:
       # Key serializer. StringSerializer is used to serialize the key of the message
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       # Value serializer. StringSerializer is used to serialize the value of the message
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # Use JsonSerializer to serialize the value of the message
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
