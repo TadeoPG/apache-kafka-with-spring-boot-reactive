@@ -15,6 +15,9 @@ spring:
       # value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       # Use JsonDeserializer to deserialize the value of the message
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        # Enable the deserializer to trust packages during deserialization. Use '*' to trust all
+        spring.json.trusted.packages: '*'
 
     # Kafka producer properties
     # https://kafka.apache.org/documentation/#producerconfigs
