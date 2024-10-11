@@ -1,1 +1,9 @@
-spring.application.name=producer
+spring:
+  kafka:
+    producer:
+      # Comma-delimited list of host:port pairs to use for establishing the initial connections to the Kafka cluster
+      bootstrap-servers: localhost:9092
+      # Key serializer. StringSerializer is used to serialize the key of the message
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # Value serializer. StringSerializer is used to serialize the value of the message
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
