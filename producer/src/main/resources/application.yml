@@ -7,3 +7,6 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       # Value serializer. StringSerializer is used to serialize the value of the message
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+server:
+  port: 8081
