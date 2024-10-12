@@ -1,1 +1,15 @@
-spring.application.name=consumer
+spring:
+  kafka:
+    # Kafka consumer properties
+    # https://kafka.apache.org/documentation/#consumerconfigs
+    consumer:
+      # Comma-delimited list of host:port pairs to use for establishing the initial connections to the Kafka cluster
+      bootstrap-servers: localhost:9092
+      # Unique string that identifies the consumer group to which this consumer belongs.
+      group-id: myGroup
+      # Specifies what to do when there is no initial offset in Kafka or if the current offset does not exist any more on the server
+      auto-offset-reset: earliest
+      # Key deserializer. StringDeserializer is used to deserialize the key of the message
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      # Value deserializer. StringDeserializer is used to deserialize the value of the message
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
